@@ -21,6 +21,11 @@
 (global-set-key [C-mouse-4] '(lambda () (interactive) (change-font-height +4)))
 (global-set-key [C-mouse-5] '(lambda () (interactive) (change-font-height -4)))
 
+(require 'cursor-chg)  ; Load the library
+(toggle-cursor-type-when-idle 1) ; Turn on cursor change when Emacs is idle
+(change-cursor-mode 1) ; Turn on change for overwrite, read-only, and input mode
+
+
 (setq-default indent-tabs-mode nil)
 (delete-selection-mode)
 (global-set-key (kbd "RET") 'newline-and-indent)
