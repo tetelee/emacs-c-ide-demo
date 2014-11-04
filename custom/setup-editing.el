@@ -14,6 +14,13 @@
 (set-language-environment "UTF-8")
 (prefer-coding-system 'utf-8)
 
+(defun change-font-height (delta)
+  (set-face-attribute 'default
+                      (selected-frame)
+                      :height (+ (face-attribute 'default :height) delta)))
+(global-set-key [C-mouse-4] '(lambda () (interactive) (change-font-height +4)))
+(global-set-key [C-mouse-5] '(lambda () (interactive) (change-font-height -4)))
+
 (setq-default indent-tabs-mode nil)
 (delete-selection-mode)
 (global-set-key (kbd "RET") 'newline-and-indent)
