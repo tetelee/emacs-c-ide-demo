@@ -1,5 +1,7 @@
 ;; GROUP: Editing -> Editing Basics
 
+(require 'iso-transl)
+
 (setq global-mark-ring-max 5000         ; increase mark ring to contains 5000 entries
       mark-ring-max 5000                ; increase kill ring to contains 5000 entries
       mode-require-final-newline t      ; add a newline to end of file
@@ -8,6 +10,8 @@
 
 (add-hook 'sh-mode-hook (lambda ()
                           (setq tab-width 4)))
+
+(global-linum-mode t)
 
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)

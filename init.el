@@ -53,6 +53,8 @@
 ;; (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
+(require 'setup-programming)
+
 
 (windmove-default-keybindings)
 
@@ -141,6 +143,9 @@
 (setq sp-autoskip-closing-pair 'always)
 (setq sp-hybrid-kill-entire-symbol nil)
 (sp-use-paredit-bindings)
+
+(desktop-save-mode 1)
+
 
 (show-smartparens-global-mode +1)
 (smartparens-global-mode 1)
